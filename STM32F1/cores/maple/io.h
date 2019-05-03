@@ -113,6 +113,15 @@ void pinMode(uint8 pin, WiringPinMode mode);
 #define LOW  0x0
 
 /**
+ * Read configuration behavior of a GPIO pin.
+ *
+ * @param pin Number of pin to configure.
+ * @param return mode cast WiringPinMode corresponding to setted pin behavior.
+ * @see WiringPinMode
+ */
+WiringPinMode getPinMode(uint8 pin);
+
+/**
  * Writes a (digital) value to a pin.  The pin must have its
  * mode set to OUTPUT or OUTPUT_OPEN_DRAIN.
  *
