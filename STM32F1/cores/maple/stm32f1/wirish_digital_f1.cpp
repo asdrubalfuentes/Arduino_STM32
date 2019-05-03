@@ -90,3 +90,7 @@ void pinMode(uint8 pin, WiringPinMode mode) {
         }
     }
 }
+
+WiringPinMode getPinMode(uint8 pin){
+	return (WiringPinMode)gpio_get_mode(PIN_MAP[pin].gpio_device, pin);
+}
